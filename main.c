@@ -6,7 +6,7 @@
 
 int main() {
 
-   openAccout(1, 1.0);
+   openAccount(1, 1.0);
     printf("Main\n");
 
 

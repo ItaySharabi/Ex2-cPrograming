@@ -2,9 +2,9 @@
 #include "myBank.h"
 #define N 50
 
-int accounts[2][N];
+int accounts[N][2];
 
-void openAccout(int accoutNumber, double initialDeposit) {
+void openAccount(int accoutNumber, double initialDeposit) {
 
         printf("OpenAccount()");
 }
@@ -24,7 +24,7 @@ double withdraw(int accountNumber, double amount) {
 }
 
 void closeAccount(int accountNumber) {
-
+    
 }
 
 void incInterest(double interest) {
@@ -34,5 +34,5 @@ void printAccounts() {
 
 }
 void exit() {
-    
+
 }
