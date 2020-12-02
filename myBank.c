@@ -4,7 +4,35 @@
 
 int accounts[2][N];
 
-bool openAccout(int accoutNumber, double initialDeposit) {
+void openAccout(int accoutNumber, double initialDeposit) {
 
+        printf("OpenAccount()");
+}
+
+double balance(int accountNumber) {
+
+
+    return 0.0;
+}
+
+double deposit(int accountNumber, double amount){ 
+    return 0.0;
+}
+
+double withdraw(int accountNumber, double amount) {
+    return 0;
+}
+
+void closeAccount(int accountNumber) {
+
+}
+
+void incInterest(double interest) {
+
+}
+void printAccounts() {
+
+}
+void exit() {
     
 }
