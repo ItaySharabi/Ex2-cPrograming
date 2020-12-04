@@ -4,53 +4,72 @@
 #define DEL 901
 // N=50 , 2 means first for account deposit value number secound for 0/1 (if the account exist or not--> 0=doesn't exist , 1= exist)
 double accounts[N][2];
-static int times=0;
 void openAccount(double initialDeposit) {
         printf("OpenAccount()");
-        if(times<N){
-            int acc=-1;
-            for (int i = 0; i < N; i++)
-            {
-                  if(accounts[i][1]==0)
-                  {
-                    acc=i;
-                    break;
-                  }
-            }
-            if(acc!=-1){
-                accounts[acc][0]=initialDeposit;
-                printf("account created");
-            }
-        }
-        else {
-            printf("max accounts");
-        }
+        
+	for(int i=0;i<N;i++){
+		if(accounts[i][0]==0){
+			accounts[i][0]=1;
+			accounts[i][1]=initialDeposit;
+			printf("Your account number is: %d \n",i+DEL);
+			return;
+		}
+	}
+printf("You cant open account because my bank is full \n");	
 }
 
 double balance(int accountNumber) {
-    int acc = DEL-accountNumber;
-    
+    if(accounts[accountNumber-DEL][0]==1){
+        return accounts[accountNumber-DEL][1];
+	}else
+		printf("This account number isn't exist! \n");
     return 0.0;
 }
 
 double deposit(int accountNumber, double amount){ 
+   	if(accounts[accountNumber-DEL][0]==1 && amount>0){
+	    accounts[accountNumber-DEL][1]+=amount;
+       return accounts[accountNumber-DEL][1];
+	}else
+		printf("This account number isn't exist or negative amount was add!");
+    return 0.0;
+}
+double withdraw(int accountNumber, double amount) {
+    	if(accounts[accountNumber-DEL][0]==1 && accounts[accountNumber-DEL][1]>=amount){
+		    accounts[accountNumber-DEL][1]-=amount;
+		    return accounts[accountNumber-DEL][1];
+	}else
+		printf("not enough money to withdrawal or worng account \n");
     return 0.0;
 }
 
-double withdraw(int accountNumber, double amount) {
-    return 0;
-}
-
 void closeAccount(int accountNumber) {
-    
+    if(accounts[accountNumber-DEL][0]==1){
+		accounts[accountNumber-DEL][0]=0;
+		accounts[accountNumber-DEL][1]=0;
+		printf("your account is close \n");
+	}else
+		printf("This account number isn't exist! \n");
 }
 
 void incInterest(double interest) {
-
+for(int i=0;i<N;i++){
+		if(accounts[i][0]==1){
+			accounts[i][1]+=(accounts[i][1]*(interest/100));
+		}
+	}
 }
 void printAccounts() {
-
+    for(int i=0;i<N;i++)
+    {
+	    if(accounts[i][0]==1){
+		    printf(" number account: %d balance: %0.2lf \n",i+DEL,accounts[i][1]);
+	    }
+    }
 }
 void exit() {
-
+for(int i=0;i<N;i++){
+		accounts[i][0]=0;
+		accounts[i][1]=0.0;
+	}
 }
