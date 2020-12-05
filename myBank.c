@@ -5,8 +5,7 @@
 // N=50 , 2 means first for account deposit value number secound for 0/1 (if the account exist or not--> 0=doesn't exist , 1= exist)
 double accounts[N][2];
 void openAccount(double initialDeposit) {
-        printf("OpenAccount()");
-        
+
 	for(int i=0;i<N;i++){
 		if(accounts[i][0]==0){
 			accounts[i][0]=1;
@@ -22,7 +21,7 @@ double balance(int accountNumber) {
     if(accounts[accountNumber-DEL][0]==1){
         return accounts[accountNumber-DEL][1];
 	}else
-		printf("This account number isn't exist! \n");
+		printf("This account number doesn't exist! \n");
     return 0.0;
 }
 
@@ -31,7 +30,7 @@ double deposit(int accountNumber, double amount){
 	    accounts[accountNumber-DEL][1]+=amount;
        return accounts[accountNumber-DEL][1];
 	}else
-		printf("This account number isn't exist or negative amount was add!");
+		printf("This account number doesn't exist or negative amount was add!");
     return 0.0;
 }
 double withdraw(int accountNumber, double amount) {
@@ -49,7 +48,7 @@ void closeAccount(int accountNumber) {
 		accounts[accountNumber-DEL][1]=0;
 		printf("your account is close \n");
 	}else
-		printf("This account number isn't exist! \n");
+		printf("This account number doesn't exist! \n");
 }
 
 void incInterest(double interest) {
@@ -63,7 +62,7 @@ void printAccounts() {
     for(int i=0;i<N;i++)
     {
 	    if(accounts[i][0]==1){
-		    printf(" number account: %d balance: %0.2lf \n",i+DEL,accounts[i][1]);
+		    printf("account number: %d balance: %0.2lf \n",i+DEL,accounts[i][1]);
 	    }
     }
 }

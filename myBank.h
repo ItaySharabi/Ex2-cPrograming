@@ -1,9 +1,9 @@
 #define N 50
 #include <stdbool.h>
 
-int accounts[N][2];
+double accounts[N][2];
 
-void openAccount(int accoutNumber, double initialDeposit);
+void openAccount(double initialDeposit);
 double balance(int accountNumber);
 double deposit(int accountNumber, double amount); //Adds the amount and print the total balance
 double withdraw(int accountNumber, double amount);
