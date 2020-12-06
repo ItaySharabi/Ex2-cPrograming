@@ -29,8 +29,11 @@ double balance(int accountNumber) {
 
 double deposit(int accountNumber, double amount){ 
    	if(accounts[accountNumber-DEL][0]==1 && amount>0){
-	    accounts[accountNumber-DEL][1]+=amount;
-       return accounts[accountNumber-DEL][1];
+	    printf("acoount is :%lf",accounts[accountNumber-DEL][1]);
+		printf("amount is:%lf\n",amount);
+		accounts[accountNumber-DEL][1]+=amount;
+		printf("your new balance is:%lf",accounts[accountNumber-DEL][1]);
+		return accounts[accountNumber-DEL][1];
 	}else
 		printf("This account number doesn't exist or negative amount was add!");
     return 0.0;

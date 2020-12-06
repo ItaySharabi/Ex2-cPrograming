@@ -43,7 +43,7 @@ int main() {
             printf("Please enter an account number: ");
             scanf("%d", &accountNumber);
             printf("\nEnter amount to deposit: ");
-            scanf("%0.2lf", &sum);
+            scanf("%lf", &sum);
             printf("New balance of account %d is: %lf \n", accountNumber, deposit(accountNumber, sum));
             break;
 
@@ -51,7 +51,7 @@ int main() {
             printf("Please enter an account number: ");
             scanf("%d", &accountNumber);
             printf("\nEnter amount to withdraw: ");
-            scanf("%0.2f", &sum);
+            scanf("%f", &sum);
             printf("New balance of account %d is: %lf \n", accountNumber, withdraw(accountNumber, sum));
             break;
         
