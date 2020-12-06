@@ -17,7 +17,7 @@ int main() {
     {
         char input;
         
-        printf("Please choose transaction type: \n O - Open account\n B - Balance\n D - Deposit\n W - Withdraw\n C - Close account\n I - Interest\n P - Print\n C - Close\n");
+        printf("Please choose transaction type: \n O - Open account\n B - Balance\n D - Deposit\n W - Withdraw\n C - Close account\n I - Interest\n P - Print\n E - Exit\n");
         scanf("%s", &input);
 
         switch (input) 
@@ -51,7 +51,7 @@ int main() {
             printf("Please enter an account number: ");
             scanf("%d", &accountNumber);
             printf("\nEnter amount to withdraw: ");
-            scanf("%f", &sum);
+            scanf("%lf", &sum);
             printf("New balance of account %d is: %lf \n", accountNumber, withdraw(accountNumber, sum));
             break;
         
