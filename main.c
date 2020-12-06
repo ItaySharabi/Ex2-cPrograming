@@ -24,7 +24,7 @@ int main() {
         {
         case 'O':
             printf("Please enter amount for deposit:\n ");
-            scanf("%0.2f", &sum);
+            scanf("%lf", &sum);
             if (sum > 0) 
             {
                 openAccount(sum);
@@ -36,15 +36,15 @@ int main() {
         case 'B':
             printf("Please enter an account number: ");
             scanf("%d", &accountNumber);
-            printf("Balance of account %d is: %0.2f \n", accountNumber, balance(accountNumber));
+            printf("Balance of account %d is: %lf \n", accountNumber, balance(accountNumber));
             break;
 
         case 'D':
             printf("Please enter an account number: ");
             scanf("%d", &accountNumber);
             printf("\nEnter amount to deposit: ");
-            scanf("%0.2f", &sum);
-            printf("New balance of account %d is: %0.2f \n", accountNumber, deposit(accountNumber, sum));
+            scanf("%0.2lf", &sum);
+            printf("New balance of account %d is: %lf \n", accountNumber, deposit(accountNumber, sum));
             break;
 
         case 'W':
@@ -52,7 +52,7 @@ int main() {
             scanf("%d", &accountNumber);
             printf("\nEnter amount to withdraw: ");
             scanf("%0.2f", &sum);
-            printf("New balance of account %d is: %0.2f \n", accountNumber, withdraw(accountNumber, sum));
+            printf("New balance of account %d is: %lf \n", accountNumber, withdraw(accountNumber, sum));
             break;
         
         case 'C':
@@ -64,7 +64,7 @@ int main() {
 
         case 'I':
             printf("Enter interest amount: ");
-            scanf("%0.2f", &interest);
+            scanf("%lf", &interest);
             incInterest(interest);
             break;
 
