@@ -10,9 +10,7 @@ void openAccount(double initialDeposit) {
 		if(accounts[i][0]==0){
 			accounts[i][0]=1.0;
 			accounts[i][1]=initialDeposit;
-			// printf("initalDeposite is :%lf \n", initialDeposit);
 			printf("Your account number is: %d \n",i+DEL);
-			// printf("Your Balance update to: %lf \n",accounts[i][1]);
 			return;
 		}
 	}
@@ -30,8 +28,6 @@ double balance(int accountNumber) {
 double deposit(int accountNumber, double amount){ 
 		
    	if(accounts[accountNumber-DEL][0]==1 && amount>0){
-	    // printf("acoount is :%lf",accounts[accountNumber-DEL][1]);
-		// printf("amount is:%lf\n",amount);
 		accounts[accountNumber-DEL][1]+=amount;
 		printf("your new balance is:%lf",accounts[accountNumber-DEL][1]);
 		return accounts[accountNumber-DEL][1];
@@ -73,7 +69,7 @@ void printAccounts() {
 	    }
     }
 }
-void exit() {
+void closeAll() {
 for(int i=0;i<N;i++){
 		accounts[i][0]=0;
 		accounts[i][1]=0.0;

@@ -10,4 +10,4 @@ double withdraw(int accountNumber, double amount);
 void closeAccount(int accountNumber);
 void incInterest(double interest);
 void printAccounts();
-void exit(); //Clears and kills the program.
+void closeAll(); //Clears and kills the program.

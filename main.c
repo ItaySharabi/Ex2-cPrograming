@@ -12,8 +12,6 @@ int main()
     char input;
     while (isRunning)
     {
-        // printf("input = %c\n", input);
-
         printf("Please choose transaction type: \n O - Open account\n B - Balance\n D - Deposit\n W - Withdraw\n C - Close account\n I - Interest\n P - Print\n E - Exit\n");
         scanf(" %c", &input);
 
@@ -25,7 +23,6 @@ int main()
             break;
         case 'O':
             printf("Please enter amount for deposit:\n ");
-            // scanf(" %lf", &sum);
             if (scanf(" %lf", &sum) == 1)
             {
                 if (sum > 0)
@@ -127,7 +124,7 @@ int main()
             break;
         case 'E':
             isRunning = 0;
-            exit();
+            closeAll();
             break;
         }
         printf("\n");
