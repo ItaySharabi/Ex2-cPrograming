@@ -70,9 +70,8 @@ void printAccounts() {
     }
 }
 void closeAll() {
-for(int i=0;i<N;i++){
+for(int i=0;i<N;i++){ 
 		accounts[i][0]=0;
 		accounts[i][1]=0.0;
-		
 	}
 }

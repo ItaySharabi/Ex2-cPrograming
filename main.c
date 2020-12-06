@@ -121,7 +121,7 @@ int main()
         case 'P':
             printf("All accounts: \n");
             printAccounts();
-            break;
+            break; 
         case 'E':
             isRunning = 0;
             closeAll();

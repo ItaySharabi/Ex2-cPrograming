@@ -11,3 +11,4 @@ main.o:main.c myBank.h
 .PHONY: clean.
 clean:
 	rm -f *.o *.so myBankRun
+	

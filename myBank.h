@@ -9,5 +9,5 @@ double deposit(int accountNumber, double amount); //Adds the amount and print th
 double withdraw(int accountNumber, double amount);
 void closeAccount(int accountNumber);
 void incInterest(double interest);
-void printAccounts();
+void printAccounts(); 
 void closeAll(); //Clears and kills the program.
